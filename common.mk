@@ -19,6 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/Books.apk:system/app/Books.apk \
+    vendor/primerunner/proprietary/common/app/BrowserGoogle.apk:system/app/BrowserGoogle.apk \
     vendor/primerunner/proprietary/common/app/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
     vendor/primerunner/proprietary/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/primerunner/proprietary/common/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
@@ -47,6 +48,8 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/talkback.apk:system/app/talkback.apk \
     vendor/primerunner/proprietary/common/app/Velvet.apk:system/app/Velvet.apk \
     vendor/primerunner/proprietary/common/app/VideoEditorGoogle.apk:system/app/VideoEditorGoogle.apk \
+    vendor/primerunner/proprietary/common/app/VoiceDialer.apk:system/app/VoiceDialer.apk \
+    vendor/primerunner/proprietary/common/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
     vendor/primerunner/proprietary/common/app/YouTube.apk:system/app/YouTube.apk \
     vendor/primerunner/proprietary/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
     vendor/primerunner/proprietary/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
