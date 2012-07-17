@@ -26,6 +26,7 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/primerunner/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/primerunner/proprietary/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
+    vendor/primerunner/proprietary/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
     vendor/primerunner/proprietary/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
     vendor/primerunner/proprietary/common/app/GoogleEars.apk:system/app/GoogleEars.apk \
     vendor/primerunner/proprietary/common/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
@@ -47,7 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/Talk.apk:system/app/Talk.apk \
     vendor/primerunner/proprietary/common/app/talkback.apk:system/app/talkback.apk \
     vendor/primerunner/proprietary/common/app/Velvet.apk:system/app/Velvet.apk \
-    vendor/primerunner/proprietary/common/app/VideoEditorGoogle.apk:system/app/VideoEditorGoogle.apk \
     vendor/primerunner/proprietary/common/app/VoiceDialer.apk:system/app/VoiceDialer.apk \
     vendor/primerunner/proprietary/common/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
     vendor/primerunner/proprietary/common/app/YouTube.apk:system/app/YouTube.apk \
@@ -66,6 +66,7 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
     vendor/primerunner/proprietary/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
     vendor/primerunner/proprietary/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so 
+    #vendor/primerunner/proprietary/common/app/VideoEditorGoogle.apk:system/app/VideoEditorGoogle.apk \
 
 ifneq ($(filter maguro crespo toro,$(TARGET_PRODUCT)),)
 # Blobs common to all devices except emulator and tablets
