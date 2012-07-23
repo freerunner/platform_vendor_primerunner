@@ -21,9 +21,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/primerunner/overlay/maguro
 
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES +=  \
-    vendor/primerunner/proprietary/tuna/app/com.modaco.odexme.apk:system/app/com.modaco.odexme.apk \
+    vendor/primerunner/proprietary/tuna/app/CarHome.apk:system/app/CarHome.apk \
+    vendor/primerunner/proprietary/tuna/app/SetupWizard.apk:system/app/SetupWizard.apk \
+    vendor/primerunner/proprietary/tuna/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/primerunner/proprietary/tuna/app/Thinkfree.apk:system/app/Thinkfree.apk \
     vendor/primerunner/proprietary/tuna/media/bootanimation.zip:system/media/bootanimation.zip
+
+# Inherit theme engine
+-include vendor/primerunner/common_themes.mk
 
 # Inherit media effect blobs
 -include vendor/primerunner/common_media_effects.mk

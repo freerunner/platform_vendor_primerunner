@@ -3,6 +3,10 @@ PRODUCT_NAME := primerunner
 PRODUCT_BRAND := primerunner
 PRODUCT_DEVICE := generic
 
+# Testing something out...
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/primerunner/overlay/common
 
@@ -19,11 +23,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/Books.apk:system/app/Books.apk \
-    vendor/primerunner/proprietary/common/app/BrowserGoogle.apk:system/app/BrowserGoogle.apk \
     vendor/primerunner/proprietary/common/app/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
     vendor/primerunner/proprietary/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/primerunner/proprietary/common/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
-    vendor/primerunner/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/primerunner/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/primerunner/proprietary/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
     vendor/primerunner/proprietary/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
@@ -35,7 +37,6 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/primerunner/proprietary/common/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
     vendor/primerunner/proprietary/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    vendor/primerunner/proprietary/common/app/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
     vendor/primerunner/proprietary/common/app/Maps.apk:system/app/Maps.apk \
     vendor/primerunner/proprietary/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/primerunner/proprietary/common/app/Music2.apk:system/app/Music2.apk \
@@ -43,12 +44,10 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/primerunner/proprietary/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/primerunner/proprietary/common/app/PlusOne.apk:system/app/PlusOne.apk \
-    vendor/primerunner/proprietary/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/primerunner/proprietary/common/app/Street.apk:system/app/Street.apk \
     vendor/primerunner/proprietary/common/app/Talk.apk:system/app/Talk.apk \
     vendor/primerunner/proprietary/common/app/talkback.apk:system/app/talkback.apk \
     vendor/primerunner/proprietary/common/app/Velvet.apk:system/app/Velvet.apk \
-    vendor/primerunner/proprietary/common/app/VoiceDialer.apk:system/app/VoiceDialer.apk \
     vendor/primerunner/proprietary/common/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
     vendor/primerunner/proprietary/common/app/YouTube.apk:system/app/YouTube.apk \
     vendor/primerunner/proprietary/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
@@ -67,14 +66,6 @@ PRODUCT_COPY_FILES += \
     vendor/primerunner/proprietary/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
     vendor/primerunner/proprietary/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so 
     #vendor/primerunner/proprietary/common/app/VideoEditorGoogle.apk:system/app/VideoEditorGoogle.apk \
-
-ifneq ($(filter maguro crespo toro,$(TARGET_PRODUCT)),)
-# Blobs common to all devices except emulator and tablets
-PRODUCT_COPY_FILES += \
-    vendor/primerunner/proprietary/common/app/CarHome.apk:system/app/CarHome.apk \
-    vendor/primerunner/proprietary/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
-    vendor/primerunner/proprietary/common/app/SetupWizard.apk:system/app/SetupWizard.apk
-endif
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
